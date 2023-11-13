@@ -12,4 +12,4 @@ While hypothesized to be an important match outcome predictor in the equivalent 
 
 The differential between fitted player scores in a match had a 79% area under the curve (AUC) when differentiating observed match outcomes. This indicates that simply by linearly ranking each WTA player (using a Bayesian model) and inferring that the player with the superior rank will win, one can expect to get 79% of inferences correct (at least retroactively on 2023 data). 
 
-See the [report]("Bayesian-Modelling-of-2023-WTA-Match-Outcomes.pdf") for further details. 
+See the [report](Bayesian-Modelling-of-2023-WTA-Match-Outcomes.pdf) for further details. 

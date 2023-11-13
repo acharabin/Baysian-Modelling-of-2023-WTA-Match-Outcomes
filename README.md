@@ -4,7 +4,7 @@ Capstone project for the Bayesian Statistics: Techniques and Models course at UC
 
 The objective of this report is to better understand the contributing factors that explain the outcome of Women’s Tennis Association (WTA) tennis matches in 2023. To do so, a Bayesian logistic model will be fit using a Monte Carlo Markov Chain (MCMC) simulation and the Metropolis-Hastings algorithm. Player rankings obtained from the model can be compared with the WTA tennis rankings at the time of the paper for validation and further insight.
 
-Of the top 10 ranked WTA players as of November 8th, 2023, 8 were also among the top 10 players in terms of match winningness based on the fitted Bayesian model. Furthermore, the top 3 ranked WTA players – Iga Swiatek, Aryna Sabalenka, and Coco Gauff – had consistent rankings in the Bayesian model. See chart 3 for rank comparisons. 
+Of the top 10 ranked WTA players as of November 8th, 2023, 8 were also among the top 10 players in terms of match winningness based on the fitted Bayesian model. Furthermore, the top 3 ranked WTA players – Iga Swiatek, Aryna Sabalenka, and Coco Gauff – had consistent rankings in the Bayesian model. See Chart 3 for rank comparisons. 
 
 ![image](wta_player_rankings_by_model.png)
 

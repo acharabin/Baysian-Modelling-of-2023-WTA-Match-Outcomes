@@ -6,7 +6,7 @@ The objective of this report is to better understand the contributing factors th
 
 Of the top 10 ranked WTA players as of November 8th, 2023, 8 were also among the top 10 players in terms of match winningness based on the fitted Bayesian model. Furthermore, the top 3 ranked WTA players – Iga Swiatek, Aryna Sabalenka, and Coco Gauff – had consistent rankings in the Bayesian model.
 
-!(WTA Player Rankings by Model.png)
+![Screenshot](WTA Player Rankings by Model.png)
 
 While hypothesized to be an important match outcome predictor in the equivalent men’s Associate of Tennis Professionals (ATP) tour, inclusion of player interaction effects with different playing surfaces (i.e., hard court) upon inference in the WTA model was not found to improve differentiation of match outcomes.  
 

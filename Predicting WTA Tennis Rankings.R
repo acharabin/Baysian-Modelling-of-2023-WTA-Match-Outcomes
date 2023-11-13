@@ -152,8 +152,6 @@ var(logit(priordatatable$priorwinperc))
 var(logit(remaining$priorwinperc))
 nrow(remaining)
 
-# Will use variance of 1/3rd to sample a players score with an effective sample size of 300
-
 # Filter to 2023 Data
 
 data = data[which(data$Date>='2023-01-01'),]%>%select(-c(Date))
@@ -308,23 +306,13 @@ predconfidence$lowerplayerscore=pmin(predconfidence$playerscore2,predconfidence$
 
 predconfidence$prhigherplayerscore = 1-pnorm(0,mean = predconfidence$higherplayerscore - predconfidence$lowerplayerscore, sd = sqrt(predconfidence$playerscore_std1^2 + predconfidence$playerscore_std2^2))
 
-mean(1-pnorm(0,mean = predconfidence$higherplayerscore - predconfidence$lowerplayerscore, sd = sqrt(predconfidence$playerscore_std1^2 + predconfidence$playerscore_std2^2+1)))
-
 head(predconfidence$prhigherplayerscore)
 
 write.csv(predconfidence,"wta_predconf.csv")
 
 head(predconfidence)
 
-1/(1+exp(-1))
-
-1/(1+exp(-2))
-
-1/(1+exp(-3))
-
 cor(predconfidence$higherplayerscore-predconfidence$lowerplayerscore, predconfidence$prhigherplayerscore)
-
-predconfidence$playerscore_std1
 
 # Get histogram of player score standard deviation
 
@@ -477,16 +465,6 @@ dic_h
 playerscore1_tcoef_h=as.vector(coef_h[2:(2+playercount-1)])[data$player1]
 
 playerscore2_tcoef_h=as.vector(coef_h[2:(2+playercount-1)])[data$player2]
-
-# surfaceadjust_tcoef_h=coef_h[(2+playercount):(2+playercount*2-1)][data$player1]
-# 
-# tieradjust_tcoef_h=coef_h[(2+playercount*2):(2+playercount*3-1)][data$player1]
-# 
-# roundadjust_tcoef_h=coef_h[(2+playercount*3):(2+playercount*4-1)][data$player1]
-
-# predprobs_h = 1/(1+exp(-(coef_h[1] + playerscore_tcoef_h + surfaceadjust_tcoef_h + tieradjust_tcoef_h + roundadjust_tcoef_h)))
-
-# + surfaceadjust_tcoef_h + tieradjust_tcoef_h + roundadjust_tcoef_h
 
 predprobs_h = 1/(1+exp(-(coef_h[1] + playerscore1_tcoef_h - playerscore2_tcoef_h)))
 

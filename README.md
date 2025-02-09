@@ -1,4 +1,4 @@
-# Baysian Modelling of 2023 WTA Match Outcomes
+# Bayesian Modelling of 2023 WTA Match Outcomes
 
 Capstone project for the Bayesian Statistics: Techniques and Models course at UC Santa Cruz. 
 
